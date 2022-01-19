@@ -7,8 +7,10 @@ import MovieFooter from './MovieFooter';
 import movies from '../data';
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return {
-        movies: state.movies,
+        movies: state.movieReducer.movies,
+        favorite: state.favoritesReducer.displayFavorites
     }
 }
 
